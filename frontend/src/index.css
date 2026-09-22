@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   RED NOIR GLOBAL THEME
+   ========================================================= */
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  color: #ffffff;
+  background: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --red: #ef233c;
+  --black: #000000;
+  --dark: #080808;
+  --dark-2: #0b0b0b;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   HTML / BODY / ROOT
+   ========================================================= */
+
+html {
+  background: #000000;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #000000;
+  color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: #ef233c;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef233c;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #ef233c;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RED GLOW UTILITIES
+   ========================================================= */
+
+.red-glow {
+  box-shadow:
+    0 0 30px rgba(239, 35, 60, 0.2),
+    0 0 80px rgba(239, 35, 60, 0.08);
+}
+
+
+/* =========================================================
+   SUBTLE GRID
+   ========================================================= */
+
+.red-noir-grid {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+}
